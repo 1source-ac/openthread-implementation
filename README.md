@@ -24,4 +24,8 @@ https://openthread.io/guides/border-router/docker/run
 
 ## Testing
 
+Connect to device:
+
+`screen /dev/ttyACM0 115200`
+
 https://github.com/openthread/openthread/tree/master/examples/apps/cli
