@@ -8,6 +8,8 @@ https://github.com/openthread/openthread/tree/master/examples/platforms/nrf528xx
 
 Convert from ELF to HEX:
 
+`arm-none-eabi-objcopy infile -O ihex out.hex`
+
 ## Testing
 
 https://github.com/openthread/openthread/tree/master/examples/apps/cli
