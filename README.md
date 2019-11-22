@@ -8,13 +8,13 @@ https://github.com/openthread/openthread/tree/master/examples/platforms/nrf528xx
 
 Convert from ELF to HEX:
 
-`arm-none-eabi-objcopy ot-ncp-ftd -O ihex --change-addresses 0x01000 ot-ncp-ftd.hex`
+`arm-none-eabi-objcopy output/nrf52840/bin/ot-ncp-ftd -O ihex --change-addresses 0x01000 output/nrf52840/bin/ot-ncp-ftd.hex`
 
 ## Building OTBR
 
 Building NCP:
 
-`make -f examples/Makefile-nrf52840 NCP_SPI=1 BORDER_AGENT=1 BORDER_ROUTER=1 COMMISSIONER=1 UDP_FORWARD=1 LINK_RAW=1 USB=1`
+`make -f examples/Makefile-nrf52840 BORDER_AGENT=1 BORDER_ROUTER=1 COMMISSIONER=1 UDP_FORWARD=1 USB=1`
 
 https://openthread.io/guides/border-router/docker
 
