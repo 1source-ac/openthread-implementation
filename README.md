@@ -4,6 +4,8 @@
 
 For dongle:
 
+`make -f examples/Makefile-nrf52840 USB=1 BOOTLOADER=1`
+
 https://github.com/openthread/openthread/tree/master/examples/platforms/nrf528xx/nrf52840#usb-cdc-acm-support
 
 Convert from ELF to HEX:
@@ -14,7 +16,7 @@ Convert from ELF to HEX:
 
 Building NCP:
 
-`make -f examples/Makefile-nrf52840 BORDER_AGENT=1 BORDER_ROUTER=1 COMMISSIONER=1 UDP_FORWARD=1 USB=1`
+`make -f examples/Makefile-nrf52840 USB=1 BOOTLOADER=1 BORDER_ROUTER=1`
 
 https://openthread.io/guides/border-router/docker
 
