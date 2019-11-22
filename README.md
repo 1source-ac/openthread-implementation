@@ -12,6 +12,10 @@ Convert from ELF to HEX:
 
 ## Building OTBR
 
+Building NCP:
+
+`make -f examples/Makefile-nrf52840 NCP_SPI=1 BORDER_AGENT=1 BORDER_ROUTER=1 COMMISSIONER=1 UDP_FORWARD=1 LINK_RAW=1 USB=1`
+
 https://openthread.io/guides/border-router/docker
 
 https://openthread.io/guides/border-router/docker/run
