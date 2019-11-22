@@ -13,6 +13,7 @@ Convert from ELF to HEX:
 ## Building OTBR
 
 https://openthread.io/guides/border-router/docker
+
 https://openthread.io/guides/border-router/docker/run
 
 ## Testing
