@@ -34,3 +34,11 @@ https://github.com/openthread/openthread/tree/master/examples/apps/cli
 ## Examples
 
 https://codelabs.developers.google.com/codelabs/openthread-hardware
+
+## To resolve
+
+Connect to Local IPv4 LAN:
+
+https://groups.google.com/forum/#!msg/openthread-users/38ladIxYDs4/RyiwIO0QDAAJ
+
+https://github.com/openthread/ot-br-posix/issues/334
