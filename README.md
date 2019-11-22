@@ -29,3 +29,8 @@ Connect to device:
 `screen /dev/ttyACM0 115200`
 
 https://github.com/openthread/openthread/tree/master/examples/apps/cli
+
+
+## Examples
+
+https://codelabs.developers.google.com/codelabs/openthread-hardware
