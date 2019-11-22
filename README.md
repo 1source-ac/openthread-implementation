@@ -8,7 +8,7 @@ https://github.com/openthread/openthread/tree/master/examples/platforms/nrf528xx
 
 Convert from ELF to HEX:
 
-`arm-none-eabi-objcopy infile -O ihex out.hex`
+`arm-none-eabi-objcopy ot-ncp-ftd -O ihex --change-addresses 0x01000 ot-ncp-ftd.hex`
 
 ## Building OTBR
 
