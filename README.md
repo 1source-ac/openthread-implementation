@@ -12,6 +12,8 @@ Convert from ELF to HEX:
 
 `arm-none-eabi-objcopy output/nrf52840/bin/ot-ncp-ftd -O ihex --change-addresses 0x01000 output/nrf52840/bin/ot-ncp-ftd.hex`
 
+`arm-none-eabi-objcopy output/nrf52840/bin/ot-cli-ftd -O ihex --change-addresses 0x01000 output/nrf52840/bin/ot-cli-ftd.hex`
+
 ## Building OpenThread Border Router (OTBR)
 
 Install docker.
