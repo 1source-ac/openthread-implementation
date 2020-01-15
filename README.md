@@ -16,7 +16,7 @@ Convert from ELF to HEX:
 
 `arm-none-eabi-objcopy output/nrf52840/bin/ot-cli-ftd -O ihex --change-addresses 0x01000 output/nrf52840/bin/ot-cli-ftd.hex`
 
-Flash using
+Flash using nrfConnect application.
 
 ### Resources
 https://github.com/openthread/openthread/tree/master/examples/platforms/nrf528xx/nrf52840#usb-cdc-acm-support
