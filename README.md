@@ -4,6 +4,10 @@
 
 For dongle:
 
+Clean first!! This was a pitfall before.
+
+`make -f examples/Makefile-nrf52840 clean`
+
 `make -f examples/Makefile-nrf52840 USB=1 BOOTLOADER=1`
 
 https://github.com/openthread/openthread/tree/master/examples/platforms/nrf528xx/nrf52840#usb-cdc-acm-support
