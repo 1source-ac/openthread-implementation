@@ -1,22 +1,25 @@
 # openthread-implementation
 
-## Building NCP
+## Building Network Co-Processor (NCP) for NRF52840 Dongle
 
-For dongle:
-
-Clean first!! This was a pitfall before.
+Do not skip cleaning! This was a pitfall before when make arguments changed.
 
 `make -f examples/Makefile-nrf52840 clean`
 
 `make -f examples/Makefile-nrf52840 USB=1 BOOTLOADER=1`
 
-https://github.com/openthread/openthread/tree/master/examples/platforms/nrf528xx/nrf52840#usb-cdc-acm-support
+
 
 Convert from ELF to HEX:
 
 `arm-none-eabi-objcopy output/nrf52840/bin/ot-ncp-ftd -O ihex --change-addresses 0x01000 output/nrf52840/bin/ot-ncp-ftd.hex`
 
 `arm-none-eabi-objcopy output/nrf52840/bin/ot-cli-ftd -O ihex --change-addresses 0x01000 output/nrf52840/bin/ot-cli-ftd.hex`
+
+Flash using
+
+### Resources
+https://github.com/openthread/openthread/tree/master/examples/platforms/nrf528xx/nrf52840#usb-cdc-acm-support
 
 ## Building OpenThread Border Router (OTBR)
 
