@@ -1,5 +1,9 @@
 # openthread-implementation
 
+## Prerequisites
+
+To understand the inner workings see here: https://openthread.io/platforms/co-processor
+
 ## Building Network Co-Processor (NCP) for NRF52840 Dongle
 
 Do not skip cleaning! This was a pitfall before when make arguments changed.
@@ -7,8 +11,6 @@ Do not skip cleaning! This was a pitfall before when make arguments changed.
 `make -f examples/Makefile-nrf52840 clean`
 
 `make -f examples/Makefile-nrf52840 USB=1 BOOTLOADER=1`
-
-
 
 Convert from ELF to HEX:
 
