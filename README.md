@@ -2,6 +2,17 @@
 
 ## Prerequisites
 
+Follow https://openthread.io/codelabs/openthread-hardware.
+
+Most important steps:
+
+```
+git clone --recursive https://github.com/openthread/openthread.git
+cd openthread
+./script/bootstrap
+./bootstrap
+```
+
 To understand the inner workings see here: https://openthread.io/platforms/co-processor
 
 ## Building Network Co-Processor (NCP) for NRF52840 Dongle
