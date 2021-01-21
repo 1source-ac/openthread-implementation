@@ -6,11 +6,24 @@ Follow https://openthread.io/codelabs/openthread-hardware.
 
 Most important steps:
 
+Clone repo:
 ```
 git clone --recursive https://github.com/openthread/openthread.git
 cd openthread
 ./script/bootstrap
 ./bootstrap
+```
+
+Build: 
+```
+make -j4 -f src/posix/Makefile-posix DAEMON=1
+make -f examples/Makefile-nrf52840 clean
+make -f examples/Makefile-nrf52840 JOINER=1 USB=1
+```
+
+Flash:
+```
+cd ~/src/openthread/output/nrf52840/bin
 ```
 
 To understand the inner workings see here: https://openthread.io/platforms/co-processor
@@ -25,9 +38,10 @@ Do not skip cleaning! This was a pitfall before when make arguments changed.
 
 Convert from ELF to HEX:
 
-`arm-none-eabi-objcopy output/nrf52840/bin/ot-ncp-ftd -O ihex --change-addresses 0x01000 output/nrf52840/bin/ot-ncp-ftd.hex`
-
-`arm-none-eabi-objcopy output/nrf52840/bin/ot-cli-ftd -O ihex --change-addresses 0x01000 output/nrf52840/bin/ot-cli-ftd.hex`
+```
+arm-none-eabi-objcopy output/nrf52840/bin/ot-ncp-ftd -O ihex --change-addresses 0x01000 output/nrf52840/bin/ot-ncp-ftd.hex
+arm-none-eabi-objcopy output/nrf52840/bin/ot-cli-ftd -O ihex --change-addresses 0x01000 output/nrf52840/bin/ot-cli-ftd.hex
+```
 
 Flash using nrfConnect application.
 
