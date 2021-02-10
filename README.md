@@ -15,6 +15,12 @@ sudo ./bootstap
 make -j4 -f src/posix/Makefile-posix DAEMON=1
 ```
 
+## Run daemon
+
+```
+sudo ./output/posix/bin/ot-daemon -v     'spinel+hdlc+uart:///dev/ttyACM0?uart-baudrate=115200'
+```
+
 ## Building Network Co-Processor (NCP) for NRF52840 Dongle
 
 ```
@@ -35,7 +41,7 @@ https://github.com/openthread/openthread/tree/master/examples/platforms/nrf528xx
 ## Building Full Thread Device (FTD) for NRF52840 Dongle
 ```
 make -f examples/Makefile-nrf52840 clean
-make -j4 -f examples/Makefile-nrf52840 COMMISSIONER=1 JOINER=1 BOOTLOADER=1
+make -j4 -f examples/Makefile-nrf52840 COMMISSIONER=1 JOINER=1 BOOTLOADER=1 USB=1
 cd output/nrf52840/bin
 arm-none-eabi-objcopy -O ihex ot-cli-ftd ot-cli-ftd.hex
 ```
