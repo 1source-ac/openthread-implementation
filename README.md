@@ -36,6 +36,7 @@ https://github.com/openthread/openthread/tree/master/examples/platforms/nrf528xx
 ```
 make -f examples/Makefile-nrf52840 clean
 make -j4 -f examples/Makefile-nrf52840 COMMISSIONER=1 JOINER=1 BOOTLOADER=1
+cd output/nrf52840/bin
 arm-none-eabi-objcopy -O ihex ot-cli-ftd ot-cli-ftd.hex
 ```
 
