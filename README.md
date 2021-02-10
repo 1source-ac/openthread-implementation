@@ -12,7 +12,7 @@ sudo ./script/bootstrap
 sudo ./bootstap
 
 # build daemon & control cli
-make -f src/posix/Makefile-posix DAEMON=1
+make -j4 -f src/posix/Makefile-posix DAEMON=1
 ```
 
 ## Building Network Co-Processor (NCP) for NRF52840 Dongle
@@ -20,7 +20,7 @@ make -f src/posix/Makefile-posix DAEMON=1
 ```
 # nrf52840 RCP
 make -f examples/Makefile-nrf52840 clean
-make -f examples/Makefile-nrf52840 JOINER=1 USB=1 BOOTLOADER=1
+make -j4 -f examples/Makefile-nrf52840 JOINER=1 USB=1 BOOTLOADER=1
 cd output/nrf52840/bin
 arm-none-eabi-objcopy -O ihex ot-rcp ot-rcp.hex
 ```
@@ -35,7 +35,7 @@ https://github.com/openthread/openthread/tree/master/examples/platforms/nrf528xx
 ## Building Full Thread Device (FTD) for NRF52840 Dongle
 ```
 make -f examples/Makefile-nrf52840 clean
-make -f examples/Makefile-nrf52840 COMMISSIONER=1 JOINER=1 BOOTLOADER=1
+make -j4 -f examples/Makefile-nrf52840 COMMISSIONER=1 JOINER=1 BOOTLOADER=1
 ```
 
 ## Building OpenThread Border Router (OTBR)
