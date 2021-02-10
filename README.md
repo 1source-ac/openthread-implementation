@@ -20,17 +20,13 @@ cd $OPENTHREAD_ROOT
 make -f examples/Makefile-nrf52840 clean
 make -f examples/Makefile-nrf52840 JOINER=1 USB=1
 cd output/nrf52840/bin
-arm-none-eabi-objcopy -O ihex ot-rcp ot-rcp.hex
+
+# change of address needed for NRF52840 dongle
+arm-none-eabi-objcopy -O ihex --change-addresses 0x1000 ot-rcp ot-rcp.hex
 ```
 
-Flash:
-```bash
-# check device connected
-ls /dev/ttyACM*
+Flash using nrfConnect Desktop Application.
 
-# flash
-nrfjprog -f nrf52 --chiperase --program ot-rcp.hex --reset
-```
 
 To understand the inner workings see here: https://openthread.io/platforms/co-processor
 
