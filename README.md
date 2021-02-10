@@ -24,8 +24,12 @@ arm-none-eabi-objcopy -O ihex ot-rcp ot-rcp.hex
 ```
 
 Flash:
-```
+```bash
+# check device connected
+ls /dev/ttyACM*
 
+# flash
+nrfjprog -f nrf52 --chiperase --program ot-rcp.hex --reset
 ```
 
 To understand the inner workings see here: https://openthread.io/platforms/co-processor
