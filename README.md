@@ -10,20 +10,22 @@ Clone repo:
 ```
 git clone --recursive https://github.com/openthread/openthread.git
 cd openthread
-./script/bootstrap
+sudo ./script/bootstrap
 ./bootstrap
 ```
 
 Build: 
 ```
-make -j4 -f src/posix/Makefile-posix DAEMON=1
+cd $OPENTHREAD_ROOT
 make -f examples/Makefile-nrf52840 clean
 make -f examples/Makefile-nrf52840 JOINER=1 USB=1
+cd output/nrf52840/bin
+arm-none-eabi-objcopy -O ihex ot-rcp ot-rcp.hex
 ```
 
 Flash:
 ```
-cd ~/src/openthread/output/nrf52840/bin
+
 ```
 
 To understand the inner workings see here: https://openthread.io/platforms/co-processor
