@@ -32,6 +32,12 @@ To understand the inner workings see here: https://openthread.io/platforms/co-pr
 ### Resources
 https://github.com/openthread/openthread/tree/master/examples/platforms/nrf528xx/nrf52840#usb-cdc-acm-support
 
+## Building Full Thread Device (FTD) for NRF52840 Dongle
+```
+make -f examples/Makefile-nrf52840 clean
+make -f examples/Makefile-nrf52840 COMMISSIONER=1 JOINER=1 BOOTLOADER=1
+```
+
 ## Building OpenThread Border Router (OTBR)
 
 Install docker.
